@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "folder_exclude_patterns": ["__pycache__"]
+        }
+    ],
+    "settings": {
+        // Le dice a LaTeXTools que siempre compile main.tex,
+        // sin importar qué archivo .tex tengas abierto.
+        "TEXroot": "main.tex"
+    }
+}

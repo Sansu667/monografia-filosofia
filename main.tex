@@ -1,0 +1,65 @@
+\documentclass[12pt,letterpaper]{report}
+
+% ===================== IDIOMA Y CODIFICACIÓN =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noindentfirst]{babel}
+\usepackage{csquotes}             
+
+% ===================== TIPOGRAFÍA Y PÁGINA =====================
+\usepackage{times}                 
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing                    % Interlineado 1.5
+
+% ===================== IMÁGENES Y TABLAS =====================
+\usepackage{graphicx}
+\graphicspath{{imagenes/}}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}
+
+% ===================== ENLACES =====================
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={Título de la monografía},
+    pdfauthor={Tu Nombre}
+}
+
+% ===================== BIBLIOGRAFÍA =====================
+\usepackage[
+    backend=biber,
+    style=apa,
+    sortcites=true,
+    sorting=nyt
+]{biblatex}
+\addbibresource{bibliografia/referencias.bib}
+
+\begin{document}
+
+\input{secciones/portada}
+
+\pagenumbering{roman}
+\tableofcontents
+%\listoffigures
+%\listoftables
+\clearpage
+\pagenumbering{arabic}
+
+\input{secciones/introduccion}
+\input{secciones/parte_uno}
+\input{secciones/conclusiones}
+
+% ===================== BIBLIOGRAFÍA =====================
+\clearpage
+\printbibliography[title={Referencias}]
+
+% ===================== ANEXOS (opcional) =====================
+% \appendix
+% \input{secciones/anexos}
+
+\end{document}
